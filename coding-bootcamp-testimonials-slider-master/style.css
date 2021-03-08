@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+/* - Dark Blue: hsl(240, 38%, 20%)
+- Grayish Blue: hsl(240, 18%, 77%) */
+
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: url(images/pattern-bg.svg) no-repeat 50% 10%/100%, 
+                url(images/pattern-curve.svg) no-repeat 50% 100%/100%, 
+                url(images/pattern-quotes.svg) no-repeat 50% 61%/15%;
+    height: 100vh;
+    display: flex;
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+
+.img>img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+}
+
+.slide{
+    position: absolute;
+    top: 300px;
+    background-color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide img{
+    width: 9px;
+    cursor: pointer;
+}
+
+.description{
+    margin: 10px 25px;
+    color: hsl(240, 38%, 20%);
+    font-weight: 300;
+}
+
+.name{
+    color: hsl(240, 38%, 20%);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.job{
+    color: hsl(240, 18%, 77%);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.john{
+    display: none;
+}
+
+@media screen and (min-width: 600px){
+    body{
+        background: url(images/pattern-bg.svg) no-repeat 90% 25%/45%,
+                    url(images/pattern-quotes.svg) no-repeat 21% 25%/8%,
+                    url(images/pattern-curve.svg) no-repeat 0 100%/40%;
+    }
+
+    .card{
+        box-sizing: border-box;
+    }
+
+    p{
+        text-align: left;
+    }
+
+    .john{
+        display: none;
+    }
+
+    .img>img{
+        width: 540px;
+        height: 540px;
+        position: absolute;
+        right: 180px;
+    }
+
+    .description{
+        z-index: 2;
+        font-size: 32px;
+        margin: 0;
+        position: absolute;
+        left: 200px;
+        max-width: 680px;
+        top: 30%;
+    }
+
+    .slide{
+        top: 590px;
+        right: 550px;
+    }
+
+    .name{
+        position: absolute;
+        left: 200px;
+        top: 60%;
+    }
+
+    .job{
+        position: absolute;
+        left: 330px;
+        top: 60%;
+    }
+}
